@@ -1,12 +1,16 @@
 Paper proposal for the Scratch Conference 2015, Amsterdam
 
 - Title: 
-How to infer the development of Computational Thinking from a Scratch project
+How to automatically infer the development of Computational Thinking from a Scratch project
 
 - Summary (for inclusion in the programme), 400 characters:
 In this paper we present the procedure used by Dr. Scratch tool to automatically assess the development of Computational Thinking (CT) demostrated by the programmer of a Scratch project. The article reviews similar initiatives, like Hairball, and research literature with proposals for assessment of Scratch projects that we studied and remixed in order to develop the CT analysis.
 
 - Description, 500 words:
-
+Definir CT, citar a Wing y otros papers del SLR_CT
+Citar a Resnick y Brennan (New Frameworks for studying 	and assessing the development of computational thinking) explicando que la evaluación del desarrollo del CT no es una tarea sencilla.
+Hablar de hairball. Hablar de otros papers en los que se proponen métodos para analizar (manualmente) el código de un proyecto Scratch para asignarle una puntuación en diferentes aspectos.
+Explicar cómo hemos utilizado estas investigaciones como base de nuestro propuesta. Listar las capacidades del CT que analizamos, y describir brevemente cómo asignamos la puntuación.
+Limitaciones de nuestro método: No podemos evaluar algunos aspectos importantes del CT, como debugging o remixing
 
 
