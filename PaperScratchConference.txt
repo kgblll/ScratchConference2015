@@ -7,10 +7,18 @@ How to automatically infer the development of Computational Thinking from a Scra
 In this paper we present the procedure used by Dr. Scratch tool to automatically assess the development of Computational Thinking (CT) demostrated by the programmer of a Scratch project. The article reviews similar initiatives, like Hairball, and research literature with proposals for assessment of Scratch projects that we studied and remixed in order to develop the CT analysis.
 
 - Description, 500 words:
-Definir CT, citar a Wing y otros papers del SLR_CT
-Citar a Resnick y Brennan (New Frameworks for studying 	and assessing the development of computational thinking) explicando que la evaluación del desarrollo del CT no es una tarea sencilla.
-Hablar de hairball. Hablar de otros papers en los que se proponen métodos para analizar (manualmente) el código de un proyecto Scratch para asignarle una puntuación en diferentes aspectos.
-Explicar cómo hemos utilizado estas investigaciones como base de nuestro propuesta. Listar las capacidades del CT que analizamos, y describir brevemente cómo asignamos la puntuación.
-Limitaciones de nuestro método: No podemos evaluar algunos aspectos importantes del CT, como debugging o remixing
 
+Computational Thinking (CT) was defined by Wing as a skill that "involves solving problems, designing systems, and understanding human behaviour, by drawing on the concepts fundamental to computer science" [1]. In the last years, governments and educational institutions are trying to include the development of this competence in schools [2]. In this regard, Lye and Koh, in their 'Review on teaching and learning of computational thinking through programming' [3], show that programming is a key instrument to develop this skill.
+
+However, assessing the development of computational thinking is not a trivial issue, and several authors, like Resnick and Brennan, have proposed different strategies and frameworks to try to address the evaluation of this competence [4]. In the same line, new tools have been developed to assist teachers in the assessment of CT. One of the most relevant tools is Hairball [5], a static code analyzer for Scratch projects that detects programming errors in the scripts of the projects.
+
+Dr Scratch is a free/open source web tool, powered by Hairball, that analyzes Scratch projects to automatically assign a CT score in terms of abstraction, logical thinking, synchronization, parallelization, flow control, user interactivity and data representation. This paper presents the algorithm used to assess the CT from Scratch code, which has been developed by remixing different proposals of educators and researchers using Scratch to teach CS.
+
+In the conclusions of the paper we discuss the limitations of the tool, as some pillars of CT, such as debugging or remixing skills, cannot be evaluated with this solution.
+
+[1] J. M. Wing. Computational thinking. Communications of the ACM, 49(3):33–35, 2006.
+[2] E. Schoolnet. Computing our future. computer programming and coding – priorities, school curricula and initiatives across europe. Technical report, European Schoolnet, 2014.
+[3] S. Y. Lye and J. H. L. Koh. Review on teaching and learning of computational thinking through programming: What is next for K-12? Computers in Human Behavior, 41:51–61, 2014.
+[4] Brennan, K., & Resnick, M. (2012, April). New frameworks for studying and assessing the development of computational thinking. In Proceedings of the 2012 annual meeting of the American Educational Research Association, Vancouver, Canada.
+[5] Boe, B., Hill, C., Len, M., Dreschler, G., Conrad, P., & Franklin, D. (2013, March). Hairball: Lint-inspired static analysis of scratch projects. In Proceeding of the 44th ACM technical symposium on Computer science education (pp. 215-220). ACM.
 
