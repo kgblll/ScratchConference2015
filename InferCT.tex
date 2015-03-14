@@ -1,0 +1,52 @@
+\documentclass[a4paper,11pt]{article}
+%\usepackage[utf8x]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+%opening
+\title{How to automatically infer the development of Computational Thinking from a Scratch project}
+\author{Jesús Moreno-León, Gregorio Robles}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+In this paper we present the procedure used by the Dr. Scratch tool to automatically assess the development of Computational Thinking  demostrated by the developer of a Scratch project. The paper reviews similar initiatives, like Hairball, and investigates the literature with proposals for assessment of Scratch projects that we have studied and remixed in order to develop the Computational Thinking analysis.
+
+\end{abstract}
+
+\section{Introduction}
+Computational Thinking (CT) was defined by Wing as a skill that "involves solving problems, designing systems, and understanding human behaviour, by drawing on the concepts fundamental to computer science" [FIXref]. In the last years, governments and educational institutions around the world are trying to include the development of this competence in schools [FIXref]. In this regard, Lye and Koh, in their 'Review on teaching and learning of computational thinking through programming' [FIXref], show that programming is a key instrument to develop this skill.
+
+However, as explained in section~\ref{sec:background}, assessing the development of computational thinking is not a trivial issue, and several authors, like Resnick and Brennan, have proposed different strategies and frameworks to try to address the evaluation of this competence [FIXref]. In the same line, new tools have been developed to assist teachers in the assessment of CT. One of the most relevant tools is Hairball [FIXref], a static code analyzer for Scratch projects that detects programming errors in the scripts of the projects.
+
+Dr Scratch is a free/open source web tool, powered by Hairball, that analyzes Scratch projects to automatically assign a CT score in terms of abstraction, logical thinking, synchronization, parallelization, flow control, user interactivity and data representation. Section~\ref{sec:methodology} presents the algorithm used to assess the CT from Scratch code, which has been developed by remixing different proposals of educators and researchers using Scratch to teach Computer Science in primary and secondary schools.
+
+Section~\ref{sec:findings} shows the results of analyzing 100 projects we randomly downladed from the Scratch web repository. Finally, in the conclusions of the paper we discuss the limitations of our approach, as some pillars of CT, such as debugging or remixing skills, cannot be evaluated with this solution.
+
+
+\section{Background}
+\label{sec:background}
+
+
+
+\section{Methodology}
+\label{sec:methodology}
+
+Contar que desarrollamos un plug-in para calcular el CT Score. Mastery. Enlace a github. Con este plugin hemos tenido en cuenta las propuestas de otros trabajos... Y lo hemos incorporado a Dr. Scratch Tool.
+
+\section{Findings}
+\label{sec:findings}
+
+Lo probamos descargando 100 proyectos de la web de Scratch y estos son los resultados. Gráfico de araña.
+
+\section{Conclusions}
+\label{sec:conclusions}
+
+In the conclusions of the paper we discuss the limitations of the tool, as some pillars of CT, such as debugging or remixing skills, cannot be evaluated with this solution.
+
+\newpage
+\bibliography{InferCT}
+\bibliographystyle{unsrt}
+\end{document}
