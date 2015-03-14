@@ -17,23 +17,30 @@ In this paper we present the procedure used by the Dr. Scratch tool to automatic
 \end{abstract}
 
 \section{Introduction}
-Computational Thinking (CT) was defined by Wing as a skill that "involves solving problems, designing systems, and understanding human behaviour, by drawing on the concepts fundamental to computer science" [FIXref]. In the last years, governments and educational institutions around the world are trying to include the development of this competence in schools [FIXref]. In this regard, Lye and Koh, in their 'Review on teaching and learning of computational thinking through programming' [FIXref], show that programming is a key instrument to develop this skill.
+Computational Thinking (CT) was defined by Wing as a skill that "involves solving problems, designing systems, and understanding human behaviour, by drawing on the concepts fundamental to computer science"~\cite{wing2006computational}. In the last years, governments and educational institutions around the world are trying to include the development of this competence in schools~\cite{euschoolnet}. In this regard, Lye and Koh, in their 'Review on teaching and learning of computational thinking through programming'~\cite{lye2014review}, show that programming is a key instrument to develop this skill.
 
-However, as explained in section~\ref{sec:background}, assessing the development of computational thinking is not a trivial issue, and several authors, like Resnick and Brennan, have proposed different strategies and frameworks to try to address the evaluation of this competence [FIXref]. In the same line, new tools have been developed to assist teachers in the assessment of CT. One of the most relevant tools is Hairball [FIXref], a static code analyzer for Scratch projects that detects programming errors in the scripts of the projects.
+However, as explained in section~\ref{sec:background}, assessing the development of computational thinking is not a trivial issue, and several authors, like Resnick and Brennan, have proposed different strategies and frameworks to try to address the evaluation of this competence~\cite{brennan2012new}. In the same line, new tools have been developed to assist teachers in the assessment of CT. One of the most relevant tools is Hairball~\cite{boe2013hairball}, a static code analyzer for Scratch projects that detects programming errors in the scripts of the projects.
 
-Dr Scratch is a free/open source web tool, powered by Hairball, that analyzes Scratch projects to automatically assign a CT score in terms of abstraction, logical thinking, synchronization, parallelization, flow control, user interactivity and data representation. Section~\ref{sec:methodology} presents the algorithm used to assess the CT from Scratch code, which has been developed by remixing different proposals of educators and researchers using Scratch to teach Computer Science in primary and secondary schools.
+Dr Scratch[FIXref] is a free/open source web tool, powered by Hairball, that analyzes Scratch projects to automatically assign a CT score in terms of abstraction, logical thinking, synchronization, parallelization, flow control, user interactivity and data representation. Section~\ref{sec:methodology} presents the algorithm used to assess the CT from Scratch code, which has been developed by remixing different proposals of educators and researchers using Scratch to teach Computer Science in primary and secondary schools.
 
 Section~\ref{sec:findings} shows the results of analyzing 100 projects we randomly downladed from the Scratch web repository. Finally, in the conclusions of the paper we discuss the limitations of our approach, as some pillars of CT, such as debugging or remixing skills, cannot be evaluated with this solution.
 
 
 \section{Background}
 \label{sec:background}
+The assessment of the development of CT is one of the most discussed topics by educators and researchers in conferences, seminars or workshops in the last years. Regarding the Scratch programming language, several authors have proposed different approaches to evaluate the development of CT of a student by analyzing their Scratch projects. 
 
+Thus, Brennan and Resnick, in their paper "New frameworks for studying and assessing the development of computational thinking"~\cite{brennan2012new}, present an strategy based on project portfolio analysis using a visualization tool called Scrape~\cite{wolz2011scrape}, which is completed with artifact-based interviews, and design scenarios.
 
+Wilson, Hainey and Connolly~\cite{wilson2012evaluation} suggest a scheme to gauge the level of programming competence demostrated by a student by analyzing a project it in terms of programming concepts (threads, conditional statements, variables...), code organisation (variable names, sprite names and extraneous blocks) and designing for usability (functionality, instructions, originality...).
+
+In this line, Seiter and Foreman developed the Progression of Early Computational Thinking (PECT) Model, a framework to assess CT in primary students coding with Scratch by systhesizing "measurable evidence from student work with broader, more abstract coding design patterns, which are then mapped onto computational thinking concepts"~\cite{seiter2013modeling}.
+
+In order to assist evaluators with a tool that could be used to partly automate the assessment of Scratch projects, Boe et al. developed Hairball~\cite{boe2013hairball}, a Lint-inspired static analysis of Scratch projects that detects issues in the code, such as code that is never executed, messages that no object receives or atribute not correctly initialized. This tool was used to asses Computer Science learning in a Scratch-based summer camp\cite{franklin2013assessment}. 
 
 \section{Methodology}
 \label{sec:methodology}
-
+Imagen logical thinking
 Contar que desarrollamos un plug-in para calcular el CT Score. Mastery. Enlace a github. Con este plugin hemos tenido en cuenta las propuestas de otros trabajos... Y lo hemos incorporado a Dr. Scratch Tool.
 
 \section{Findings}
@@ -43,10 +50,10 @@ Lo probamos descargando 100 proyectos de la web de Scratch y estos son los resul
 
 \section{Conclusions}
 \label{sec:conclusions}
-
+Además hablar de la detección de errores. No solo nos interesan los bloques que están usando, sino si los están usando bien. Enlazar con el paper de FIE y volver a citar a hairball hablando de sus plugins.
 In the conclusions of the paper we discuss the limitations of the tool, as some pillars of CT, such as debugging or remixing skills, cannot be evaluated with this solution.
 
 \newpage
 \bibliography{InferCT}
-\bibliographystyle{unsrt}
+\bibliographystyle{abbrv}
 \end{document}
