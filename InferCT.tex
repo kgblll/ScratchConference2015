@@ -23,7 +23,7 @@ Computational Thinking (CT) was defined by Wing as a skill that "involves solvin
 
 However, as explained in section~\ref{sec:background}, assessing the development of computational thinking is not a trivial issue, and several authors, like Resnick and Brennan, have proposed different strategies and frameworks to try to address the evaluation of this competence~\cite{brennan2012new}. In the same line, new tools have been developed to assist teachers in the assessment of CT. One of the most relevant tools is Hairball~\cite{boe2013hairball}, a static code analyzer for Scratch projects that detects programming errors in the scripts of the projects.
 
-Dr Scratch[FIXref] is a free/open source web tool, powered by Hairball, that analyzes Scratch projects to automatically assign a CT score in terms of abstraction, logical thinking, synchronization, parallelization, flow control, user interactivity and data representation. Section~\ref{sec:methodology} presents the algorithm used to assess the CT from Scratch code, which has been developed by remixing different proposals of educators and researchers using Scratch to teach Computer Science in primary and secondary schools.
+Dr Scratch[FIXref] is a free/open source web tool, powered by Hairball, that analyzes Scratch projects to automatically assign a CT score in terms of abstraction, logical thinking, synchronization, parallelism, flow control, user interactivity and data representation. Section~\ref{sec:methodology} presents the algorithm used to assess the CT from Scratch code, which has been developed by remixing different proposals of educators and researchers using Scratch to teach Computer Science in primary and secondary schools.
 
 Section~\ref{sec:findings} shows the results of analyzing 100 projects we randomly downladed from the Scratch web repository. Finally, in the conclusions of the paper we discuss the limitations of our approach, as some pillars of CT, such as debugging or remixing skills, cannot be evaluated with this solution.
 
@@ -42,7 +42,7 @@ In order to assist evaluators with a tool that could be used to partly automate 
 
 \section{Methodology}
 \label{sec:methodology}
-Inspired by the work reviewed in section~\ref{sec:background}, we developed a plug-in for the Hairball environment, \textit{Mastery}\footnote{https://github.com/jemole/hairball/blob/master/hairball/plugins/mastery.py}, which analyses a Scratch project to assign a CT score depending on the competence demonstrated by the developer on the following concepts: abstraction and problem decomposition, logical thinking, synchronization, parallelization, algorithmic notions of flow control, user interactivity and data representation. In order to evaluate the level of development on each of these concepts, \textit{Mastery} plug-in implements an algorithm based on the rules of table \ref{table:CTscore}.
+Inspired by the work reviewed in section~\ref{sec:background}, we developed a plug-in for the Hairball environment, \textit{Mastery}\footnote{https://github.com/jemole/hairball/blob/master/hairball/plugins/mastery.py}, which analyses a Scratch project to assign a CT score depending on the competence demonstrated by the developer on the following concepts: abstraction and problem decomposition, logical thinking, synchronization, parallelism, algorithmic notions of flow control, user interactivity and data representation. In order to evaluate the level of development on each of these concepts, \textit{Mastery} plug-in implements an algorithm based on the rules of table \ref{table:CTscore}.
 \begin{table*}[t]
 \centering
 \caption{Level of development of each CT concept}
@@ -55,7 +55,7 @@ Logical thinking & if & if else & logic operations \\
 User Interactivity & green flag & key pressed, sprite clicked, ask and wait,
 mouse blocks & when \%s is \textgreater \%s, video, audio \\ 
 Flow control & Sequence of blocks & repeat, forever & repeat until \\ 
-Abstraction & more than 1 scripts & more than 1 scripts and more than 1 sprites & def block\\ Parallelization & 2 scripts on green flag & 2 scripts on key pressed, 2 scripts on sprite clicked on the same sprite & 2 scripts on when I recieve message, create clone, 2 scripts when \%s is \textgreater \%s, 2 scripts on when backdrop change to \\
+Abstraction & more than 1 scripts & more than 1 scripts and more than 1 sprites & def block\\ parallelism & 2 scripts on green flag & 2 scripts on key pressed, 2 scripts on sprite clicked on the same sprite & 2 scripts on when I recieve message, create clone, 2 scripts when \%s is \textgreater \%s, 2 scripts on when backdrop change to \\
 Synchronization & wait & Broadcast, when I receive message, stop all, stop program, stop programs sprite & wait until, when backdrop change to, when I start as clon, broadcast and wait \\ \bottomrule
 \end{tabular}
 \label{table:CTscore}
@@ -81,12 +81,18 @@ With the aim of making it easier for users to analyze their projects, we have de
 \section{Findings}
 \label{sec:findings}
 
-Lo probamos descargando 100 proyectos de la web de Scratch y estos son los resultados. Gráfico de araña.
+In order to test the \textit{Mastery} plug-in, we randomly downloaded 100 projects from the Scratch repository. The average CT score was 14.4 points, while the median was 16 and the mode 18. As can be seen in figure~\ref{fig:scores}, which presents the mean score for each of the CT concepts, flow control, abstraction, parallelism and synchronization are concepts slightly above the average, while user interactivity and data representation get lower values.
+\begin{figure}
+  \centering
+    \includegraphics[width=10cm]{img/spider.png}
+    \caption{CT score average of 100 randomly downloaded project from the Scratch repository}
+    \label{fig:scores}
+\end{figure}
 
 \section{Conclusions and future work}
 \label{sec:conclusions}
-Además hablar de la detección de errores. No solo nos interesan los bloques que están usando, sino si los están usando bien. Enlazar con el paper de FIE y volver a citar a hairball hablando de sus plugins.
-In the conclusions of the paper we discuss the limitations of the tool, as some pillars of CT, such as debugging or remixing skills, cannot be evaluated with this solution.
+No solo nos interesan los bloques que están usando, sino si los están usando bien. Hablar de la detección de errores, de nuestros plug-ins y de los de hairball.
+Discuss the limitations of the tool, as some pillars of CT, such as debugging or remixing skills, cannot be evaluated with this solution.
 Futuro: hablar del estudio con Marcos para validar Dr. Scratch y TPC como herramientas para medir el CT.
 \newpage
 \bibliography{InferCT}
