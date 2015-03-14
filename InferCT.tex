@@ -2,6 +2,8 @@
 %\usepackage[utf8x]{inputenc}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{lscape}
 
 %opening
 \title{How to automatically infer the development of Computational Thinking from a Scratch project}
@@ -32,27 +34,60 @@ The assessment of the development of CT is one of the most discussed topics by e
 
 Thus, Brennan and Resnick, in their paper "New frameworks for studying and assessing the development of computational thinking"~\cite{brennan2012new}, present an strategy based on project portfolio analysis using a visualization tool called Scrape~\cite{wolz2011scrape}, which is completed with artifact-based interviews, and design scenarios.
 
-Wilson, Hainey and Connolly~\cite{wilson2012evaluation} suggest a scheme to gauge the level of programming competence demostrated by a student by analyzing a project it in terms of programming concepts (threads, conditional statements, variables...), code organisation (variable names, sprite names and extraneous blocks) and designing for usability (functionality, instructions, originality...).
+Wilson, Hainey and Connolly~\cite{wilson2012evaluation} suggest a scheme to gauge the level of programming competence demostrated by a student by analyzing a project in terms of programming concepts (threads, conditional statements, variables...), code organisation (variable names, sprite names and extraneous blocks) and designing for usability (functionality, instructions, originality...).
 
-In this line, Seiter and Foreman developed the Progression of Early Computational Thinking (PECT) Model, a framework to assess CT in primary students coding with Scratch by systhesizing "measurable evidence from student work with broader, more abstract coding design patterns, which are then mapped onto computational thinking concepts"~\cite{seiter2013modeling}.
+In this line, Seiter and Foreman developed the Progression of Early Computational Thinking Model, a framework to assess CT in primary students coding with Scratch by systhesizing "measurable evidence from student work with broader, more abstract coding design patterns, which are then mapped onto computational thinking concepts"~\cite{seiter2013modeling}.
 
 In order to assist evaluators with a tool that could be used to partly automate the assessment of Scratch projects, Boe et al. developed Hairball~\cite{boe2013hairball}, a Lint-inspired static analysis of Scratch projects that detects issues in the code, such as code that is never executed, messages that no object receives or atribute not correctly initialized. This tool was used to asses Computer Science learning in a Scratch-based summer camp\cite{franklin2013assessment}. 
 
 \section{Methodology}
 \label{sec:methodology}
-Imagen logical thinking
-Contar que desarrollamos un plug-in para calcular el CT Score. Mastery. Enlace a github. Con este plugin hemos tenido en cuenta las propuestas de otros trabajos... Y lo hemos incorporado a Dr. Scratch Tool.
+Inspired by the work reviewed in section~\ref{sec:background}, we developed a plug-in for the Hairball environment, \textit{Mastery}\footnote{https://github.com/jemole/hairball/blob/master/hairball/plugins/mastery.py}, which analyses a Scratch project to assign a CT score depending on the competence demonstrated by the developer on the following concepts: abstraction and problem decomposition, logical thinking, synchronization, parallelization, algorithmic notions of flow control, user interactivity and data representation. In order to evaluate the level of development on each of these concepts, \textit{Mastery} plug-in implements an algorithm based on the rules of table \ref{table:CTscore}.
+\begin{table*}[t]
+\centering
+\caption{Level of development of each CT concept}
+\begin{tabular}{p{2.5cm}p{2.7cm}p{3cm}p{4cm}}
+\toprule
+CT concept & Basic & Developing & Proficient\\ \midrule 
+Data representation & Modifiers of sprites properties &
+Operations on vars & Operations on lists  \\
+Logical thinking & if & if else & logic operations \\ 
+User Interactivity & green flag & key pressed, sprite clicked, ask and wait,
+mouse blocks & when \%s is \textgreater \%s, video, audio \\ 
+Flow control & Sequence of blocks & repeat, forever & repeat until \\ 
+Abstraction & more than 1 scripts & more than 1 scripts and more than 1 sprites & def block\\ Parallelization & 2 scripts on green flag & 2 scripts on key pressed, 2 scripts on sprite clicked on the same sprite & 2 scripts on when I recieve message, create clone, 2 scripts when \%s is \textgreater \%s, 2 scripts on when backdrop change to \\
+Synchronization & wait & Broadcast, when I receive message, stop all, stop program, stop programs sprite & wait until, when backdrop change to, when I start as clon, broadcast and wait \\ \bottomrule
+\end{tabular}
+\label{table:CTscore}
+\end{table*}
+
+Figure~\ref{fig:logic} can be used to illustrate the operation of the plug-in. Thus, following the rules in table~\ref{table:CTscore}, the first script of the picture would be catalogued as \textit{basic} in terms of logical thinking, as only \textit{if} statements are used. The second script, however, would be considered to demonstrate a \textit{developing} level, because an \textit{if else} block is utilized. Finally, the third script would prove a \textit{proficient} level on this concept, as a logical operation, \textit{or}, is being used.
+\begin{figure}
+  \centering
+    \includegraphics[width=9cm]{img/Logic.png}
+    \caption{Different levels of development of logical thinking}
+    \label{fig:logic}
+\end{figure}
+
+With the aim of making it easier for users to analyze their projects, we have developed a web tool called Dr. Scratch that allows to analyze Scratch programs by either uploading an sb2 file or introducing the url of the project. Figure~\ref{fig:drscratch} shows the output of Dr. Scratch tool after performing the analysis on a Scratch project called Just Jump\footnote{http://scratch.mit.edu/projects/52452686/}. An overall CT score of 16 points is assigned, informing the user about the partial count on every CT concept.
+\begin{figure}
+  \centering
+    \includegraphics[width=13cm]{img/results.png}
+    \caption{Dr. Scratch shows the CT Score after analysing a Scratch project}
+    \label{fig:drscratch}
+\end{figure}
+%FIXme sustituir imagen Dr. Scratch en español por imagen en inglés.
 
 \section{Findings}
 \label{sec:findings}
 
 Lo probamos descargando 100 proyectos de la web de Scratch y estos son los resultados. Gráfico de araña.
 
-\section{Conclusions}
+\section{Conclusions and future work}
 \label{sec:conclusions}
 Además hablar de la detección de errores. No solo nos interesan los bloques que están usando, sino si los están usando bien. Enlazar con el paper de FIE y volver a citar a hairball hablando de sus plugins.
 In the conclusions of the paper we discuss the limitations of the tool, as some pillars of CT, such as debugging or remixing skills, cannot be evaluated with this solution.
-
+Futuro: hablar del estudio con Marcos para validar Dr. Scratch y TPC como herramientas para medir el CT.
 \newpage
 \bibliography{InferCT}
 \bibliographystyle{abbrv}
