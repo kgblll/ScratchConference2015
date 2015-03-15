@@ -23,7 +23,7 @@ Computational Thinking (CT) was defined by Wing as a skill that "involves solvin
 
 However, as explained in section~\ref{sec:background}, assessing the development of computational thinking is not a trivial issue, and several authors, like Resnick and Brennan, have proposed different strategies and frameworks to try to address the evaluation of this competence~\cite{brennan2012new}. In the same line, new tools have been developed to assist teachers in the assessment of CT. One of the most relevant tools is Hairball~\cite{boe2013hairball}, a static code analyzer for Scratch projects that detects programming errors in the scripts of the projects.
 
-Dr Scratch[FIXref] is a free/open source web tool, powered by Hairball, that analyzes Scratch projects to automatically assign a CT score in terms of abstraction, logical thinking, synchronization, parallelism, flow control, user interactivity and data representation. Section~\ref{sec:methodology} presents the algorithm used to assess the CT from Scratch code, which has been developed by remixing different proposals of educators and researchers who are using Scratch to teach Computer Science in primary and secondary schools.
+Dr Scratch~\cite{moreno2014drscratch} is a free/open source web tool, powered by Hairball, that analyzes Scratch projects to automatically assign a CT score in terms of abstraction, logical thinking, synchronization, parallelism, flow control, user interactivity and data representation. Section~\ref{sec:methodology} presents the algorithm used to assess the CT from Scratch code, which has been developed by remixing different proposals of educators and researchers who are using Scratch to teach Computer Science in primary and secondary schools.
 
 Section~\ref{sec:findings} shows the results of analyzing 100 projects we randomly downladed from the Scratch web repository. Finally, in the conclusions of the paper we discuss the limitations of our approach, as some pillars of CT, such as debugging or remixing skills, cannot be evaluated with this solution.
 
@@ -70,7 +70,7 @@ Figure~\ref{fig:logic} can be used to illustrate the operation of the plug-in. T
     \label{fig:logic}
 \end{figure}
 
-With the aim of making it easier for users to analyze their projects, we have developed a web tool called Dr. Scratch that allows to analyze Scratch programs by either uploading an sb2 file or just introducing the url of the project. Figure~\ref{fig:drscratch} shows the output of Dr. Scratch tool after performing the analysis on a Scratch project called Just Jump\footnote{http://scratch.mit.edu/projects/52452686/}. An overall CT score of 16 points is assigned, informing the user about the partial count on every CT concept.
+With the aim of making it easier for users to analyze their projects, we have developed a web tool called Dr. Scratch\footnote{http://drscratch.programamos.es/} that allows to analyze Scratch programs by either uploading an sb2 file or just introducing the url of the project. Figure~\ref{fig:drscratch} shows the output of Dr. Scratch tool after performing the analysis on a Scratch project called Just Jump\footnote{http://scratch.mit.edu/projects/52452686/}. An overall CT score of 16 points is assigned, informing the user about the partial count on every CT concept.
 \begin{figure}
   \centering
     \includegraphics[width=13cm]{img/results.png}
